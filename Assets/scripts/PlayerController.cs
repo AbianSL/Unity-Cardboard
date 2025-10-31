@@ -6,16 +6,8 @@ public class PlayerController : MonoBehaviour
     public bool enableGazeMovement = true;
     public bool requireButtonForGaze = true;
 
-    private Transform camTransform;
-
     void Start()
     {
-        camTransform = transform;
-        if (camTransform == null)
-        {
-            Debug.LogError("Main Camera not found. Please tag your camera as 'MainCamera'.");
-            enabled = false;
-        }
     }
 
     void Update()
@@ -27,8 +19,8 @@ public class PlayerController : MonoBehaviour
 
         if (Mathf.Abs(horizontal) > 0.05f || Mathf.Abs(vertical) > 0.05f)
         {
-            Vector3 forward = camTransform.forward;
-            Vector3 right = camTransform.right;
+            Vector3 forward = transform.forward;
+            Vector3 right = transform.right;
 
             forward.y = 0; 
             right.y = 0;
@@ -43,9 +35,10 @@ public class PlayerController : MonoBehaviour
             bool moveByGaze = !requireButtonForGaze || Input.GetMouseButton(0) || Input.touchCount > 0;
             if (moveByGaze)
             {
-                Vector3 forward = camTransform.forward;
+                Vector3 forward = transform.forward;
                 forward.y = 0;
                 forward.Normalize();
+                
                 moveDirection = forward * moveSpeed * Time.deltaTime;
             }
         }
