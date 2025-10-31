@@ -851,6 +851,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 773156826}
+  - component: {fileID: 773156827}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -875,6 +876,21 @@ Transform:
   - {fileID: 1981355463}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &773156827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773156825}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6ea2331b6ebfbe4a9a19070fa8ded55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 2
+  enableGazeMovement: 1
+  requireButtonForGaze: 1
 --- !u!1 &907292807
 GameObject:
   m_ObjectHideFlags: 0
@@ -1401,10 +1417,9 @@ GameObject:
   - component: {fileID: 1384675423}
   - component: {fileID: 1384675422}
   - component: {fileID: 1384675427}
-  - component: {fileID: 1384675428}
   m_Layer: 0
   m_Name: Main Camera
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1574,21 +1589,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 10
---- !u!114 &1384675428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1384675420}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6ea2331b6ebfbe4a9a19070fa8ded55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 2
-  enableGazeMovement: 1
-  requireButtonForGaze: 1
 --- !u!1 &1399198719
 GameObject:
   m_ObjectHideFlags: 0
